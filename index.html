@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="quote"></h1>
+    <button onclick="generateRandom()">Generate Again</button>
+
+    <script>
+        const quotes = [
+            "The universe is under no obligation to make sense to you.",
+            "Not all those who wander are lost.",
+            "Simplicity is the soul of efficiency.",
+            "Reality is frequently inaccurate.",
+            "The limits of my language mean the limits of my world."
+        ];
+
+        function randomColor() {
+            return `hsl(${Math.floor(Math.random() * 360)}, 70%, 50%)`;
+        }
+
+        function generateRandom() {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById("quote").textContent = randomQuote;
+            document.body.style.backgroundColor = randomColor();
+        }
+
+        generateRandom();
+    </script>
+</body>
+
+</html>
