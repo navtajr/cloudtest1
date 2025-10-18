@@ -1,0 +1,21 @@
+#Name of the workflow
+name: myName
+
+#Event - manually in our case
+on: workflow_dispatch
+
+#Jobs 
+jobs:
+#Any name oft the job
+  first-job:
+    runs-on:ubunt-latest
+    steps:
+      - name: Print greeting
+      - run: echo "Hello World"
+      - name: Print goodbye
+      - run: echo "Done-bye!"
+      
+    
+
+
+
