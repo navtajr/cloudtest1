@@ -6,9 +6,8 @@ on: workflow_dispatch
 
 #Jobs 
 jobs:
-#Any name oft the job
   first-job:
-    runs-on:ubunt-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print greeting
       - run: echo "Hello World"
