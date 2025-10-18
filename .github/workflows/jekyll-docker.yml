@@ -1,18 +1,14 @@
-#Name of the workflow
-name: myName
-
-#Event - manually in our case
+name: First Workflow
 on: workflow_dispatch
-
-#Jobs 
 jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print greeting
-      - run: echo "Hello World"
+        run: echo "Hello World!"
       - name: Print goodbye
-      - run: echo "Done-bye!"
+        run: echo "Done - bye!"
+
       
     
 
